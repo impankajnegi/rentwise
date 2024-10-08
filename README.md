@@ -1,60 +1,36 @@
-# Next.js Full-stack starter template 2024
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-Welcome to the Next.js Full-stack starter template! This template provides a starting point for creating full-stack applications with Next.js.
+## Getting Started
 
-![Next.js](https://img.shields.io/badge/next.js-242424?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![Next-Auth](https://img.shields.io/badge/Next%20Auth-563D7C?style=for-the-badge&logoColor=white)
-![Typescript](https://img.shields.io/badge/Typescript-007acc?style=for-the-badge&logo=typescript&logoColor=fff)
-![React](https://img.shields.io/badge/-React-61DBFB?style=for-the-badge&logo=react&logoColor=black)
-![Ant-Design](https://img.shields.io/badge/AntDesign-0170FE?style=for-the-badge&logo=antdesign&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-![SASS Badge](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
+First, run the development server:
 
-## Features ⚡
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-- **NextAuth:** Integration of NextAuth for authentication, providing support for various authentication providers.
-- **TypeScript:** Developed with TypeScript for type safety and improved developer experience.
-- **MongoDB:** Integration with MongoDB for database management and storage.
-- **Ant Design:** Includes Ant Design for UI components, providing a sleek and modern design out of the box.
-- **Styling:** Style using CSS, SASS, SCSS, or CSS-in-JS.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-![Screenshot](https://img.hotimg.com/ss0801c6061e6c5b5d.png)
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
----
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## How to use this template? 🤔
+## Learn More
 
-To get started with this template, you just need to follow these simple steps:
+To learn more about Next.js, take a look at the following resources:
 
-1. Clone the repository:
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-   ```
-   git clone https://github.com/wdevon99/Next-js-starter.git
-   ```
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-2. Install dependencies:
+## Deploy on Vercel
 
-   ```
-   npm i
-   ```
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-3. Add `.env` file and add the values for the following keys:
-
-   ```
-    NEXTAUTH_URL=
-    NEXTAUTH_SECRET=
-
-    GOOGLE_ID=
-    GOOGLE_CLIENT_SECRET=
-
-    GITHUB_ID=
-    GITHUB_CLIENT_SECRET=
-
-    MONGODB_URI=
-   ```
-
-4. Run project locally
-
-   ```
-   npm run dev
-   ```
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
