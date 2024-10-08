@@ -1,80 +1,107 @@
-'use client';
-import React, { useState } from 'react';
-
-const items = [
-  { id: 1, name: 'Laptop', image: 'https://via.placeholder.com/150', price: '$999' },
-  { id: 2, name: 'Smartphone', image: 'https://via.placeholder.com/150', price: '$699' },
-  { id: 3, name: 'Camera', image: 'https://via.placeholder.com/150', price: '$499' },
-  { id: 4, name: 'Headphones', image: 'https://via.placeholder.com/150', price: '$199' },
-  { id: 5, name: 'Tablet', image: 'https://via.placeholder.com/150', price: '$399' },
-  { id: 6, name: 'Smartwatch', image: 'https://via.placeholder.com/150', price: '$249' },
-  { id: 7, name: 'Drone', image: 'https://via.placeholder.com/150', price: '$899' },
-  { id: 8, name: 'Game Console', image: 'https://via.placeholder.com/150', price: '$299' },
-  { id: 9, name: 'Desktop', image: 'https://via.placeholder.com/150', price: '$1299' },
-  { id: 10, name: 'Monitor', image: 'https://via.placeholder.com/150', price: '$199' },
-  { id: 11, name: 'Keyboard', image: 'https://via.placeholder.com/150', price: '$49' },
-  { id: 12, name: 'Mouse', image: 'https://via.placeholder.com/150', price: '$29' },
-  { id: 13, name: 'Charger', image: 'https://via.placeholder.com/150', price: '$19' },
-  { id: 14, name: 'Portable Speaker', image: 'https://via.placeholder.com/150', price: '$99' },
-  { id: 15, name: 'Action Camera', image: 'https://via.placeholder.com/150', price: '$399' },
-  { id: 16, name: 'VR Headset', image: 'https://via.placeholder.com/150', price: '$599' },
-  { id: 17, name: 'Gaming Chair', image: 'https://via.placeholder.com/150', price: '$199' },
-  { id: 18, name: 'Fitness Tracker', image: 'https://via.placeholder.com/150', price: '$149' },
-  { id: 19, name: 'Wireless Earbuds', image: 'https://via.placeholder.com/150', price: '$89' },
-  { id: 20, name: 'Smart Lamp', image: 'https://via.placeholder.com/150', price: '$39' },
-  { id: 21, name: 'Smart Lock', image: 'https://via.placeholder.com/150', price: '$149' },
-  { id: 22, name: 'Smart Fridge', image: 'https://via.placeholder.com/150', price: '$2499' },
+/*
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/aspect-ratio'),
+    ],
+  }
+  ```
+*/
+const products = [
+  {
+    id: 1,
+    name: "Basic Tee",
+    href: "#",
+    imageSrc:
+      "https://tailwindui.com/plus/img/ecommerce-images/product-page-01-related-product-01.jpg",
+    imageAlt: "Front of men's Basic Tee in black.",
+    price: "$35",
+    color: "Black",
+  },
+  {
+    id: 2,
+    name: "Basic Tee",
+    href: "#",
+    imageSrc:
+      "https://tailwindui.com/plus/img/ecommerce-images/product-page-01-related-product-01.jpg",
+    imageAlt: "Front of men's Basic Tee in black.",
+    price: "$35",
+    color: "Black",
+  },
+  {
+    id: 3,
+    name: "Basic Tee",
+    href: "#",
+    imageSrc:
+      "https://tailwindui.com/plus/img/ecommerce-images/product-page-01-related-product-01.jpg",
+    imageAlt: "Front of men's Basic Tee in black.",
+    price: "$35",
+    color: "Black",
+  },
+  {
+    id: 4,
+    name: "Basic Tee",
+    href: "#",
+    imageSrc:
+      "https://tailwindui.com/plus/img/ecommerce-images/product-page-01-related-product-01.jpg",
+    imageAlt: "Front of men's Basic Tee in black.",
+    price: "$35",
+    color: "Black",
+  },
+  {
+    id: 5,
+    name: "Basic Tee",
+    href: "#",
+    imageSrc:
+      "https://tailwindui.com/plus/img/ecommerce-images/product-page-01-related-product-01.jpg",
+    imageAlt: "Front of men's Basic Tee in black.",
+    price: "$35",
+    color: "Black",
+  },
+  // More products...
 ];
 
-const ItemList = ({ listHeader }) => {
-  const [showMore, setshowMore] = useState(false);
-  const [showAll, setshowAll] = useState(false);
-
-  const handleSeeMore = () => {
-    setshowMore(true);
-  };
-
-  const handleSeeAll =()=>{
-    setshowAll(true)
-  }
-
+export default function ItemList() {
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-4 text-center">{listHeader}</h1>
-      <div className="flex justify-center items-center">
-        <div className="flex overflow-x-auto space-x-4 ">
-          {(showMore ? items : items.slice(0, 10)).map(item => (
-            <div key={item.id} className="flex flex-col items-center border rounded-lg shadow-lg p-4 w-48 min-w-48">
-              <img src={item.image} alt={item.name} className="w-full h-32 object-cover mb-2 rounded" />
-              <h2 className="text-lg font-semibold">{item.name}</h2>
-              <p className="text-gray-700">{item.price}</p>
-              <button className="mt-2 bg-blue-500 text-white py-1 px-4 rounded hover:bg-blue-600 transition">
-                Rent Now
-              </button>
+    <div className="bg-white">
+      <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+        <h2 className="text-2xl font-bold tracking-tight text-gray-900">
+          Customers also purchased
+        </h2>
+
+        <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+          {products.map((product) => (
+            <div key={product.id} className="group relative">
+              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                <img
+                  alt={product.imageAlt}
+                  src={product.imageSrc}
+                  className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                />
+              </div>
+              <div className="mt-4 flex justify-between">
+                <div>
+                  <h3 className="text-sm text-gray-700">
+                    <a href={product.href}>
+                      <span aria-hidden="true" className="absolute inset-0" />
+                      {product.name}
+                    </a>
+                  </h3>
+                  <p className="mt-1 text-sm text-gray-500">{product.color}</p>
+                </div>
+                <p className="text-sm font-medium text-gray-900">
+                  {product.price}
+                </p>
+              </div>
             </div>
           ))}
-          {!showMore ? (
-            <button 
-              onClick={handleSeeMore} 
-              className="flex flex-col items-center   p-4 w-48 bg-transparent text-blue-600 hover:bg-blue-200 transition justify-center"
-            >
-              <span className="text-lg font-semibold">See More</span>
-            </button>
-          ): (
-            <button 
-            onClick={handleSeeAll} 
-            className="flex flex-col items-center  p-4 w-48 bg-transparent text-blue-600 hover:bg-blue-200 transition justify-center"
-          >
-            <span className="text-lg font-semibold">Explore All Hot Deals</span>
-          </button>
-          )}
- 
-
-          
         </div>
       </div>
     </div>
   );
-};
-
-export default ItemList;
+}
